@@ -24,4 +24,5 @@ Route::post('users', [UserController::class, 'store']);
 
 Route::prefix('admins')->middleware('auth:sanctum')->group(function () {
     Route::post('login', Admin\Auth\LoginController::class)->withoutMiddleware('auth:sanctum');
+    Route::get('users', [Admin\UserController::class, 'index']);
 });
