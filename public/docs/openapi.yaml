@@ -1,0 +1,221 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: 'User handler api endpoint documentation'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/admins/login:
+    post:
+      summary: 'POST Login'
+      operationId: pOSTLogin
+      description: 'Login a user.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  access_token: token
+                properties:
+                  access_token:
+                    type: string
+                    example: token
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  email:
+                    - 'The provided credentials are incorrect.'
+                properties:
+                  email:
+                    type: array
+                    example:
+                      - 'The provided credentials are incorrect.'
+                    items:
+                      type: string
+      tags:
+        - 'Admin Auth endpoint'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: alyson74@example.org
+                password:
+                  type: string
+                  description: ''
+                  example: '1>dl#9&|L*Eh'
+              required:
+                - email
+                - password
+      security: []
+  /api/admins/users:
+    get:
+      summary: 'GET Users'
+      operationId: gETUsers
+      description: 'Get a list of Users.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: '{"data": [{"id": 1,"name": "Dolores Reynolds","division": "C","email": "sawayn.meda@example.net"},]}'
+      tags:
+        - 'Admin endpoint'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: wayne12@example.com
+                division:
+                  type: string
+                  description: ''
+                  example: vero
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/users:
+    post:
+      summary: 'POST Signup'
+      operationId: pOSTSignup
+      description: 'Create a User.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    name: 'Random Name'
+                    email: example@example.com
+                    division: A
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: 'Random Name'
+                      email:
+                        type: string
+                        example: example@example.com
+                      division:
+                        type: string
+                        example: A
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The given data was invalid.'
+                  errors:
+                    email:
+                      - 'The email has already been taken.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The given data was invalid.'
+                  errors:
+                    type: object
+                    properties:
+                      email:
+                        type: array
+                        example:
+                          - 'The email has already been taken.'
+                        items:
+                          type: string
+      tags:
+        - 'User endpoint'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vhdbfpgk
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: connelly.ardella@example.org
+                password:
+                  type: string
+                  description: 'Must be at least 6 characters.'
+                  example: '3V9=Fd%p*SY'
+                division:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: hnqazoacabijuggkqf
+              required:
+                - name
+                - email
+                - password
+                - division
+      security: []
+tags:
+  -
+    name: 'Admin Auth endpoint'
+    description: ''
+  -
+    name: 'Admin endpoint'
+    description: ''
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: 'User endpoint'
+    description: ''
