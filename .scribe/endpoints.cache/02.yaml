@@ -28,19 +28,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: alyson74@example.org
+        example: jaida.greenfelder@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: '1>dl#9&|L*Eh'
+        example: "<':Vue2I'FNE"
         type: string
         custom: []
     cleanBodyParameters:
-      email: alyson74@example.org
-      password: '1>dl#9&|L*Eh'
+      email: jaida.greenfelder@example.net
+      password: "<':Vue2I'FNE"
     fileParameters: []
     responses:
       -

@@ -17,6 +17,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -28,19 +29,19 @@ endpoints:
         name: email
         description: ''
         required: false
-        example: wayne12@example.com
+        example: mcassin@example.net
         type: string
         custom: []
       division:
         name: division
         description: ''
         required: false
-        example: vero
+        example: mollitia
         type: string
         custom: []
     cleanBodyParameters:
-      email: wayne12@example.com
-      division: vero
+      email: mcassin@example.net
+      division: mollitia
     fileParameters: []
     responses:
       -
@@ -50,7 +51,10 @@ endpoints:
         description: ''
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer a53bE6VP41ge8dfhvkZ6Dca'
     controller: null
     method: null
     route: null
