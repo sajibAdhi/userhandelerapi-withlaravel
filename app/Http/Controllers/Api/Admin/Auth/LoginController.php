@@ -8,8 +8,19 @@ use App\Models\Admin;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Hash;
 
+/**
+ * @group Admin Auth endpoint
+ */
 class LoginController extends Controller
 {
+    /**
+     * POST Login
+     *
+     * Admin Login
+     *
+     * @response {"access_token": "token"}
+     * @response 422 {"email": ["The provided credentials are incorrect."]}
+     */
     public function __invoke(LoginRequest $request): JsonResponse
     {
         $user = Admin::where('email', $request->email)->first();

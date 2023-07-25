@@ -1,0 +1,59 @@
+name: 'Admin endpoint'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/admins/users
+    metadata:
+      groupName: 'Admin endpoint'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET Users'
+      description: 'Get a list of Users.'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: ''
+        required: false
+        example: torphy.olga@example.org
+        type: string
+        custom: []
+      division:
+        name: division
+        description: ''
+        required: false
+        example: porro
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: torphy.olga@example.org
+      division: porro
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data": [{"id": 1,"name": "Dolores Reynolds","division": "C","email": "sawayn.meda@example.net"},]}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer f16aaDPc8Z5kgv364VEbdeh'
+    controller: null
+    method: null
+    route: null
+    custom: []

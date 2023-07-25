@@ -1,0 +1,77 @@
+name: 'User endpoint'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/users
+    metadata:
+      groupName: 'User endpoint'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST Signup'
+      description: 'Create a User.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: vvqrbswkqbtfliyakpjfbvipj
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: wlockman@example.net
+        type: string
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 6 characters.'
+        required: true
+        example: 'yRc#L]GQ'
+        type: string
+        custom: []
+      division:
+        name: division
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: biae
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: vvqrbswkqbtfliyakpjfbvipj
+      email: wlockman@example.net
+      password: 'yRc#L]GQ'
+      division: biae
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data": {"id": 1, "name": "Random Name", "email": "example@example.com", "division": "A"}}'
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: '{"message": "The given data was invalid.", "errors": {"email": ["The email has already been taken."]}}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
