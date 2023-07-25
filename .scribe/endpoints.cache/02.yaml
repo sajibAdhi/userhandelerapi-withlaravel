@@ -13,7 +13,7 @@ endpoints:
       subgroup: ''
       subgroupDescription: ''
       title: 'POST Login'
-      description: 'Login a user.'
+      description: 'Admin Login'
       authenticated: false
       custom: []
     headers:
@@ -28,19 +28,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: jaida.greenfelder@example.net
+        example: fbartoletti@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: "<':Vue2I'FNE"
+        example: '4BZU28;P%4w]q'
         type: string
         custom: []
     cleanBodyParameters:
-      email: jaida.greenfelder@example.net
-      password: "<':Vue2I'FNE"
+      email: fbartoletti@example.net
+      password: '4BZU28;P%4w]q'
     fileParameters: []
     responses:
       -

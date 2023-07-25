@@ -27,19 +27,19 @@ endpoints:
         name: email
         description: ''
         required: false
-        example: mcassin@example.net
+        example: torphy.olga@example.org
         type: string
         custom: []
       division:
         name: division
         description: ''
         required: false
-        example: mollitia
+        example: porro
         type: string
         custom: []
     cleanBodyParameters:
-      email: mcassin@example.net
-      division: mollitia
+      email: torphy.olga@example.org
+      division: porro
     fileParameters: []
     responses:
       -
@@ -52,7 +52,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a53bE6VP41ge8dfhvkZ6Dca'
+      - 'Bearer f16aaDPc8Z5kgv364VEbdeh'
     controller: null
     method: null
     route: null

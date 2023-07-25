@@ -28,35 +28,35 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: stbpmpxuffiol
+        example: vvqrbswkqbtfliyakpjfbvipj
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: kjohns@example.com
+        example: wlockman@example.net
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 6 characters.'
         required: true
-        example: '&5$ITb[3'
+        example: 'yRc#L]GQ'
         type: string
         custom: []
       division:
         name: division
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: nvauhegnqqaj
+        example: biae
         type: string
         custom: []
     cleanBodyParameters:
-      name: stbpmpxuffiol
-      email: kjohns@example.com
-      password: '&5$ITb[3'
-      division: nvauhegnqqaj
+      name: vvqrbswkqbtfliyakpjfbvipj
+      email: wlockman@example.net
+      password: 'yRc#L]GQ'
+      division: biae
     fileParameters: []
     responses:
       -

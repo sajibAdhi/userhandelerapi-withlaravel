@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "ec0ff329-0981-4a20-add5-55599c51954b",
+        "_postman_id": "63368354-65e4-4302-98d1-d3c41b7da165",
         "description": "User handler api endpoint documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,9 +41,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"jaida.greenfelder@example.net\",\"password\":\"<':Vue2I'FNE\"}"
+                            "raw": "{\"email\":\"fbartoletti@example.net\",\"password\":\"4BZU28;P%4w]q\"}"
                         },
-                        "description": "Login a user.",
+                        "description": "Admin Login",
                         "auth": {
                             "type": "noauth"
                         }
@@ -91,7 +91,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"mcassin@example.net\",\"division\":\"mollitia\"}"
+                            "raw": "{\"email\":\"torphy.olga@example.org\",\"division\":\"porro\"}"
                         },
                         "description": "Get a list of Users."
                     },
@@ -186,7 +186,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"stbpmpxuffiol\",\"email\":\"kjohns@example.com\",\"password\":\"&5$ITb[3\",\"division\":\"nvauhegnqqaj\"}"
+                            "raw": "{\"name\":\"vvqrbswkqbtfliyakpjfbvipj\",\"email\":\"wlockman@example.net\",\"password\":\"yRc#L]GQ\",\"division\":\"biae\"}"
                         },
                         "description": "Create a User.",
                         "auth": {

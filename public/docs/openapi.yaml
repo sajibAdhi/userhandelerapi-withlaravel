@@ -11,7 +11,7 @@ paths:
     post:
       summary: 'POST Login'
       operationId: pOSTLogin
-      description: 'Login a user.'
+      description: 'Admin Login'
       parameters: []
       responses:
         200:
@@ -54,11 +54,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: jaida.greenfelder@example.net
+                  example: fbartoletti@example.net
                 password:
                   type: string
                   description: ''
-                  example: "<':Vue2I'FNE"
+                  example: '4BZU28;P%4w]q'
               required:
                 - email
                 - password
@@ -96,11 +96,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: mcassin@example.net
+                  example: torphy.olga@example.org
                 division:
                   type: string
                   description: ''
-                  example: mollitia
+                  example: porro
   /api/user:
     get:
       summary: ''
@@ -804,19 +804,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: stbpmpxuffiol
+                  example: vvqrbswkqbtfliyakpjfbvipj
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: kjohns@example.com
+                  example: wlockman@example.net
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: '&5$ITb[3'
+                  example: 'yRc#L]GQ'
                 division:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: nvauhegnqqaj
+                  example: biae
               required:
                 - name
                 - email

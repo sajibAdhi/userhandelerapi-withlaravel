@@ -16,7 +16,7 @@ class LoginController extends Controller
     /**
      * POST Login
      *
-     * Login a user.
+     * Admin Login
      *
      * @response {"access_token": "token"}
      * @response 422 {"email": ["The provided credentials are incorrect."]}
